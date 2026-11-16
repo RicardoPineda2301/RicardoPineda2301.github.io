@@ -1,59 +1,113 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="estilos.css">
-  </head>
-
-  <header class="site-header" id="header">
-    <div class="site-identity">
-      <a href="#"><img src="Logo.png" alt="Site Name" /></a>
-      <h1 id="TituloHeader"><a href="#">Pine Studios GT</a></h1>
-    </div>  
-
-    <div>
-        <h1 id="IndicadorHeader"> Inicio</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ricardo Pineda de León | QA Automation &amp; Full Stack Developer</title>
+  <meta name="description" content="Interactive CV, work experience timeline, and personal GitHub projects of Ricardo Pineda de León." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#">Ricardo<span>.dev</span></a>
+      <nav class="nav-links">
+        <a href="#overview">Skills</a>
+        <a href="#experience">Timeline</a>
+        <a href="#projects">Projects</a>
+        <button id="theme-toggle" class="theme-btn" type="button">☀️ Light</button>
+      </nav>
     </div>
-
   </header>
 
-  <body id="bckg">
-    
-<div class="container">
- <a href="quienes.html"> <button class="btn btn1">Quienes Somos</button></a>
- <a href="productos.html"> <button class="btn btn2">Productos</button></a>  
- <a href="contacto.html"> <button class="btn btn2">Contacto</button></a>  
-</div>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Zaragoza, Spain (Remote) · Freelancer (Autónomo)
+      </div>
+      <h1>Ricardo Pineda de León</h1>
+      <p class="hero-subtitle">QA Automation Engineer &amp; Full Stack Developer</p>
+      <p class="hero-summary">
+        Systems Engineer with 3+ years of experience in QA Automation, specializing in
+        Selenium, Cypress, and Playwright. Proven track record improving release efficiency
+        by 30% through automation. Skilled in Java, Python, React, JavaScript, Node.js,
+        and Docker with experience bridging QA and development teams.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="assets/RicardoPineda_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <a class="btn" href="https://github.com/RicardoPineda2301" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/ricardo-p-274218137/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:ricardosebastianpineda@gmail.com">Email Me</a>
+      </div>
+    </section>
 
-
-    <div id="hcg-slider-1" class="hcg-slider">
-        <div class="hcg-slide-container">
-        <div class="hcg-slider-body">
-            <a class="hcg-slides animated" style="display:flex">
-                <span class="hcg-slide-number">1/5</span>
-                <img src="QA01.jpeg" alt="image 1">
-            </a>
+    <section id="overview">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Core Skills &amp; Education</h2>
+          <p class="section-sub">Technical strengths and academic background.</p>
         </div>
-        <a href="#" id="hcg-slide-prev">❮</a>
-        <a href="#" id="hcg-slide-next">❯</a>
-    </div>
-    <div class="hcg-slide-dot-control"></div>
-    </div>
+      </div>
 
+      <div class="overview-grid">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <div id="skills-list" class="skills-list"></div>
+          <div class="lang-row">
+            <span class="pill">🇪🇸 Spanish — Native (5/5)</span>
+            <span class="pill">🇬🇧 English — Fluent (5/5)</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Education</h3>
+          <div class="edu-dates">Jan 2016 - Nov 2020</div>
+          <div style="font-weight: 700; font-size: 1.05rem;">Bachelor's Degree in Computer Science</div>
+          <div class="edu-inst">Universidad Francisco Marroquín</div>
+          <p class="edu-desc">
+            Four-year program focused on software engineering, algorithms, data structures,
+            and systems design, with hands-on programming, database management, and web development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Work Experience Timeline</h2>
+          <p class="section-sub">From Java development to QA Automation leadership and Full Stack engineering.</p>
+        </div>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section id="projects">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Personal Projects</h2>
+          <p class="section-sub">Selected repositories from GitHub.</p>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="ai" type="button">AI &amp; LLMs</button>
+          <button class="filter-btn" data-filter="tools" type="button">In Progress</button>
+          <button class="filter-btn" data-filter="blockchain" type="button">Blockchain</button>
+        </div>
+      </div>
+      <div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <footer>
+      <span>© 2026 Ricardo Pineda de León · Zaragoza, Spain</span>
+      <span>Built with HTML, CSS &amp; Vanilla JS · <a href="https://github.com/RicardoPineda2301?tab=repositories" target="_blank" rel="noopener">All GitHub Repositories →</a></span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
 </body>
-
-<footer id="footer">
-  <div id="Socials">
-      
-     <a href="https://www.facebook.com/ricardosebastianpineda/"><img src="fb.png" alt="" height=45 width=45></img></a> 
-     <a href="https://twitter.com/Sdl_00"><img src="twitter.png" alt=""  height=45 width=45></img></a> 
-     <a href="https://github.com/RicardoPineda2301"><img src="github.png" alt="" height=45 width=45></img></a> 
-  <br>
-  
-     © Pine Studios Guatemala, 2023
-      
-  </div>
-  </footer>
-
 </html>
